@@ -9,4 +9,7 @@ export default antfu({
     'style/jsx-one-expression-per-line': ['warn', { allow: 'single-line' }],
     'antfu/no-top-level-await': 'off',
   },
+  ignores: [
+    '.marko-run',
+  ],
 })

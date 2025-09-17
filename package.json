@@ -4,9 +4,9 @@
   "private": true,
   "module": "index.ts",
   "scripts": {
-    "dev": "marko-run",
-    "build": "marko-run build",
-    "preview": "marko-run preview",
+    "dev": "bun --bun marko-run src/index.ts",
+    "build": "bun --bun marko-run build src/index.ts",
+    "preview": "bun --bun marko-run preview src/index.ts",
     "lint": "eslint . --fix",
     "format": "prettier . -w",
     "update": "taze latest -wr"
@@ -21,12 +21,14 @@
   "devDependencies": {
     "@antfu/eslint-config": "^5.3.0",
     "@marko/run": "^0.8.1",
+    "@marko/run-adapter-node": "^2.0.3",
     "@marko/vite": "^5.3.0",
     "@types/bun": "latest",
     "@unocss/eslint-plugin": "^66.5.1",
     "eslint": "^9.35.0",
     "eslint-plugin-format": "^1.0.1",
     "taze": "^19.6.0",
+    "unocss": "^66.5.1",
     "vite": "^7.1.5"
   }
 }
