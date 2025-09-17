@@ -9,13 +9,14 @@
     "preview": "bun --bun marko-run preview src/index.ts",
     "lint": "eslint . --fix",
     "format": "prettier . -w",
-    "update": "taze latest -wr"
+    "update": "taze latest -wr",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
-    "elysia": "^1.4.5",
+    "hono": "^4.9.7",
     "marko": "^6.0.74"
   },
   "devDependencies": {
@@ -30,5 +31,8 @@
     "taze": "^19.6.0",
     "unocss": "^66.5.1",
     "vite": "^7.1.5"
+  },
+  "prettier": {
+    "semi": false
   }
 }
