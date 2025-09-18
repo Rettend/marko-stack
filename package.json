@@ -8,7 +8,7 @@
     "build": "bun --bun marko-run build src/index.ts",
     "preview": "bun --bun marko-run preview src/index.ts",
     "lint": "eslint . --fix",
-    "format": "prettier . -w",
+    "format": "prettier \"**/*.marko\" -w",
     "update": "taze latest -wr"
   },
   "peerDependencies": {
@@ -27,8 +27,15 @@
     "@unocss/eslint-plugin": "^66.5.1",
     "eslint": "^9.35.0",
     "eslint-plugin-format": "^1.0.1",
+    "prettier": "^3.6.2",
+    "prettier-plugin-marko": "^3.3.2",
     "taze": "^19.6.0",
     "unocss": "^66.5.1",
     "vite": "^7.1.5"
+  },
+  "prettier": {
+    "markoSyntax": "html",
+    "semi": false,
+    "plugins": ["prettier-plugin-marko"]
   }
 }
